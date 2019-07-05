@@ -1,0 +1,46 @@
+@media (min-width: 750px) {
+  .container {
+    grid-template-areas: "Sidebar Main";
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: none;
+  }
+  .logoWrapper {
+    flex-direction: column;
+  }
+  .altLogo {
+    margin-bottom: 10px;
+  }
+  .dashContent {
+    padding: 10px 20px;
+  }
+  .measurementItem {
+    flex-direction: column;
+  }
+  .measurementStat {
+    margin-top: 5px;
+  }
+  .listLine {
+    margin-bottom: 15px;
+  }
+  .styleButtons {
+    flex-direction: column;
+  }
+  .styleButtons button {
+    margin: 15px 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    grid-template-columns: 350px 1fr;
+  }
+  .logoWrapper {
+    flex-direction: row;
+  }
+  .altLogo {
+    margin-bottom: 0;
+  }
+  .measurementItem {
+    flex-direction: row;
+  }
+}
