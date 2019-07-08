@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/iss-tracker/static/css/main.aa79e619.chunk.css",
+    "main.js": "/iss-tracker/static/js/main.8f01b28c.chunk.js",
+    "main.js.map": "/iss-tracker/static/js/main.8f01b28c.chunk.js.map",
+    "runtime~main.js": "/iss-tracker/static/js/runtime~main.dcf7a060.js",
+    "runtime~main.js.map": "/iss-tracker/static/js/runtime~main.dcf7a060.js.map",
+    "static/js/2.42a13583.chunk.js": "/iss-tracker/static/js/2.42a13583.chunk.js",
+    "static/js/2.42a13583.chunk.js.map": "/iss-tracker/static/js/2.42a13583.chunk.js.map",
+    "index.html": "/iss-tracker/index.html",
+    "precache-manifest.1ab06d7d448161ffc5175f0b2c1aa616.js": "/iss-tracker/precache-manifest.1ab06d7d448161ffc5175f0b2c1aa616.js",
+    "service-worker.js": "/iss-tracker/service-worker.js",
+    "static/css/main.aa79e619.chunk.css.map": "/iss-tracker/static/css/main.aa79e619.chunk.css.map",
+    "static/media/App.css": "/iss-tracker/static/media/nasalization-rg.82987827.ttf",
+    "static/media/iss-1.png": "/iss-tracker/static/media/iss-1.93b3c122.png",
+    "static/media/nasa-alt-logo.png": "/iss-tracker/static/media/nasa-alt-logo.da43858e.png",
+    "static/media/nasa-load-logo2.gif": "/iss-tracker/static/media/nasa-load-logo2.d65b793c.gif",
+    "static/media/nasa-logo.png": "/iss-tracker/static/media/nasa-logo.6099842f.png"
+  }
+}
