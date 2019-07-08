@@ -2,11 +2,11 @@ import React, { Component } from "react"
 import ReactMapGL, { Marker } from "react-map-gl"
 import "./App.css"
 import "./media.css"
-import ISS1 from "./iss-1.png"
-// import ISS2 from "./iss-2.png"
-import NasaLogo from "./nasa-logo.png"
-import NasaAltLogo from "./nasa-alt-logo.png"
-import NasaLoadLogo from "./nasa-load-logo2.gif"
+import ISS1 from "./img/iss-1.png"
+// import ISS2 from "./img/iss-2.png"
+import NasaLogo from "./img/nasa-logo.png"
+import NasaAltLogo from "./img/nasa-alt-logo.png"
+import NasaLoadLogo from "./img/nasa-load-logo2.gif"
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiYmVubWF1ZHNsYXkiLCJhIjoiY2p0N2RtOHB1MDJzbDN5bzh5c25zaDllZyJ9.D0RtSq3i_afvqrXX2jHFbg"
@@ -251,19 +251,24 @@ const Dashboard = ({ handleMapStyle, iss }) => {
             unit="km"
           />
         </div>
-        <div className="styleButtons">
-          Map style:
-          <MapStyleButton
-            handleMapStyle={handleMapStyle}
-            buttonVal="Satellite"
-          />
-          <MapStyleButton handleMapStyle={handleMapStyle} buttonVal="Dark" />
-          <MapStyleButton handleMapStyle={handleMapStyle} buttonVal="Light" />
-          <MapStyleButton
-            handleMapStyle={handleMapStyle}
-            buttonVal="Outdoors"
-          />
-          <MapStyleButton handleMapStyle={handleMapStyle} buttonVal="Streets" />
+        <div className="buttonContainer">
+          <div className="styleButtons">
+            <p className="buttonHeader">Map style:</p>
+            <MapStyleButton
+              handleMapStyle={handleMapStyle}
+              buttonVal="Satellite"
+            />
+            <MapStyleButton handleMapStyle={handleMapStyle} buttonVal="Dark" />
+            <MapStyleButton handleMapStyle={handleMapStyle} buttonVal="Light" />
+            <MapStyleButton
+              handleMapStyle={handleMapStyle}
+              buttonVal="Outdoors"
+            />
+            <MapStyleButton
+              handleMapStyle={handleMapStyle}
+              buttonVal="Streets"
+            />
+          </div>
         </div>
       </div>
     </div>

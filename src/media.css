@@ -24,9 +24,13 @@
   }
   .styleButtons {
     flex-direction: column;
+    justify-content: space-evenly;
   }
   .styleButtons button {
     margin: 15px 0;
+  }
+  .logoWrapper {
+    padding: 20px 10px;
   }
 }
 

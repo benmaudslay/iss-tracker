@@ -100,7 +100,7 @@ body {
   opacity: 0.5;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px 10px 20px 10px;
+  padding: 15px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -169,12 +169,22 @@ body {
   margin-bottom: 10px;
 }
 
-.styleButtons {
+.buttonContainer {
   grid-area: buttons;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
+}
+
+.buttonHeader {
+  width: 100%;
+}
+
+.styleButtons {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 15px 0;
+  width: 100%;
 }
 
 .styleButtons button {
@@ -183,4 +193,5 @@ body {
   font-size: 16px;
   border-radius: 7px;
   padding: 10px 10px;
+  margin: 0 0 10px 0;
 }
