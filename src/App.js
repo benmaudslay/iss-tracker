@@ -1,16 +1,15 @@
 import React, { Component } from "react"
 import ReactMapGL, { Marker } from "react-map-gl"
+// Stylesheets
 import "./App.css"
 import "./media.css"
+// Assets
 import ISS1 from "./img/iss-1.png"
-// import ISS2 from "./img/iss-2.png"
-import NasaLogo from "./img/nasa-logo.png"
 import NasaAltLogo from "./img/nasa-alt-logo.png"
 import NasaLoadLogo from "./img/nasa-load-logo2.gif"
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiYmVubWF1ZHNsYXkiLCJhIjoiY2p0N2RtOHB1MDJzbDN5bzh5c25zaDllZyJ9.D0RtSq3i_afvqrXX2jHFbg"
-// const ZOOM_LEVEL = 2
 
 class App extends Component {
   state = {
@@ -73,35 +72,32 @@ class App extends Component {
     this.setState({ chosenStyle: newStyle })
   }
 
+  // This method persists the user controlled zoom level
   handleZoom = () => {
     const { currentZoom, viewport } = this.state
     const newZoom = viewport.zoom
     currentZoom !== newZoom && this.setState({ currentZoom: newZoom })
   }
 
+  // This method ensures that the map maintains its styling when the size of the window changes.
   handleResize = () => {
-    const { iss, currentZoom } = this.state
     this.setState({
-      viewport: {
-        width: "100%",
-        height: "100%",
-        latitude: iss.lat,
-        longitude: iss.long,
-        zoom: currentZoom
-      },
       windowHeight: window.innerHeight,
       windowWidth: window.innerWidth
     })
   }
 
+  // Allows control of load time
   handleLoad = () => this.setState({ loaded: true })
 
+  // Required by ReactMapboxGL
   handleView = viewport => this.setState({ viewport })
 
   componentDidMount() {
     this.interval = setInterval(() => {
       const { currentZoom } = this.state
 
+      // API call
       fetch("https://api.wheretheiss.at/v1/satellites/25544")
         .then(res => res.json())
         .then(data => {
@@ -159,7 +155,9 @@ class App extends Component {
 }
 
 const Loading = ({ handleLoad }) => {
+  // Set minimum load time to 2s
   setTimeout(() => handleLoad(), 2000)
+
   return (
     <div className="App">
       <div className="App-header">
@@ -217,6 +215,7 @@ const MapInterface = ({ viewport, chosenStyle, iss, handleView }) => {
       >
         <div className="spaceStationContainer">
           <div className="littleRedDot" />
+          {/* Fall back to show the ISS position should the img not load */}
           <img className="spaceStation" alt="Space Station" src={ISS1} />
         </div>
       </Marker>
@@ -225,6 +224,7 @@ const MapInterface = ({ viewport, chosenStyle, iss, handleView }) => {
 }
 
 const Dashboard = ({ handleMapStyle, iss }) => {
+  // Rounding the long, lat to 6 decimal places
   let searchTerm = ".",
     long = iss.long.toString(),
     lat = iss.lat.toString(),
