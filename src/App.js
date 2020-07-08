@@ -8,6 +8,9 @@ import ISS1 from "./img/iss-1.png"
 import NasaAltLogo from "./img/nasa-alt-logo.png"
 import NasaLoadLogo from "./img/nasa-load-logo2.gif"
 
+// Because this is being used as a teaching resource, all components are kept in this file.
+// Normally each component would be in its own file and tokens would be hidden.
+
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiYmVubWF1ZHNsYXkiLCJhIjoiY2p0N2RtOHB1MDJzbDN5bzh5c25zaDllZyJ9.D0RtSq3i_afvqrXX2jHFbg"
 
